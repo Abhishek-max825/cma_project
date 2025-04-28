@@ -90,7 +90,7 @@ function createProductCard(product) {
     
     card.innerHTML = `
         <div class="product-image">
-            <img src="${product.image}" alt="${product.title}">
+            <img src="${product.image}" alt="${product.title}" onerror="this.src='img/box1.jpg'">
         </div>
         <div class="product-title">${product.title}</div>
         <div class="product-rating">
@@ -206,7 +206,7 @@ function getSampleProducts() {
             id: 1,
             title: "New Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD)",
             price: 1299.99,
-            image: "https://m.media-amazon.com/images/I/71an9eiBxpL._AC_UL320_.jpg",
+            image: "img/box1.jpg",
             rating: 5,
             ratingCount: 1423,
             isPrime: true,
@@ -217,7 +217,7 @@ function getSampleProducts() {
             id: 2,
             title: "Apple AirPods Pro Wireless Earbuds with MagSafe Charging Case",
             price: 249.99,
-            image: "https://m.media-amazon.com/images/I/71zny7BTRlL._AC_UL320_.jpg",
+            image: "img/box2.jpg",
             rating: 4,
             ratingCount: 5297,
             isPrime: true,
@@ -228,7 +228,7 @@ function getSampleProducts() {
             id: 3,
             title: "Samsung Galaxy S21 Ultra 5G Factory Unlocked Android Cell Phone 128GB",
             price: 999.99,
-            image: "https://m.media-amazon.com/images/I/61O45C5qASL._AC_UL320_.jpg",
+            image: "img/box3.jpg",
             rating: 4,
             ratingCount: 3521,
             isPrime: true,
@@ -239,7 +239,7 @@ function getSampleProducts() {
             id: 4,
             title: "Sony X80J 65 Inch TV: 4K Ultra HD LED Smart Google TV",
             price: 799.99,
-            image: "https://m.media-amazon.com/images/I/91RfzivKmwL._AC_UL320_.jpg",
+            image: "img/box4.jpg",
             rating: 5,
             ratingCount: 1892,
             isPrime: true,
@@ -248,91 +248,47 @@ function getSampleProducts() {
         },
         {
             id: 5,
-            title: "Canon EOS R6 Full-Frame Mirrorless Camera with 24-105mm Lens Kit",
-            price: 2499.99,
-            image: "https://m.media-amazon.com/images/I/61SAg1N6YHL._AC_UL320_.jpg",
+            title: "Canon EOS R5 Full-Frame Mirrorless Camera",
+            price: 3899.99,
+            image: "img/box5.jpg",
             rating: 5,
-            ratingCount: 487,
+            ratingCount: 876,
             isPrime: true,
             categories: ["electronics", "camera"],
             dateAdded: "2023-05-15"
         },
         {
             id: 6,
-            title: "Amazon Echo (4th Gen) | With premium sound, smart home hub, and Alexa",
-            price: 99.99,
-            image: "https://m.media-amazon.com/images/I/71JB6hM6Z6L._AC_UL320_.jpg",
+            title: "Dell XPS 13 Laptop - 13.4-inch 4K UHD+ Touch Display",
+            price: 1499.99,
+            image: "img/box6.jpg",
             rating: 4,
-            ratingCount: 12568,
+            ratingCount: 2345,
             isPrime: true,
-            categories: ["electronics"],
+            categories: ["electronics", "computers"],
             dateAdded: "2023-06-20"
         },
         {
             id: 7,
-            title: "Acer Aspire 5 A515-56-36UT Slim Laptop | 15.6\" Full HD Display",
-            price: 389.99,
-            image: "https://m.media-amazon.com/images/I/7189iXimfWL._AC_UL320_.jpg",
+            title: "Bose QuietComfort 45 Bluetooth Wireless Noise Cancelling Headphones",
+            price: 329.99,
+            image: "img/box7.jpg",
             rating: 4,
-            ratingCount: 1936,
+            ratingCount: 4321,
             isPrime: true,
-            categories: ["electronics", "computers"],
+            categories: ["electronics"],
             dateAdded: "2023-07-25"
         },
         {
             id: 8,
-            title: "Logitech MX Master 3 Advanced Wireless Mouse",
-            price: 99.99,
-            image: "https://m.media-amazon.com/images/I/614w3LuZTYL._AC_UL320_.jpg",
+            title: "LG OLED C1 Series 65-Inch Class 4K Smart TV",
+            price: 1799.99,
+            image: "img/box8.jpg",
             rating: 5,
-            ratingCount: 8765,
+            ratingCount: 1567,
             isPrime: true,
-            categories: ["electronics", "computers"],
+            categories: ["electronics", "tv"],
             dateAdded: "2023-08-30"
-        },
-        {
-            id: 9,
-            title: "Samsung 970 EVO Plus SSD 2TB NVMe M.2 Internal Solid State Hard Drive",
-            price: 199.99,
-            image: "https://m.media-amazon.com/images/I/81gqFEXJItL._AC_UL320_.jpg",
-            rating: 5,
-            ratingCount: 6543,
-            isPrime: true,
-            categories: ["electronics", "computers"],
-            dateAdded: "2023-09-05"
-        },
-        {
-            id: 10,
-            title: "Sony WH-1000XM4 Wireless Noise Canceling Overhead Headphones",
-            price: 348.00,
-            image: "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UL320_.jpg",
-            rating: 5,
-            ratingCount: 32651,
-            isPrime: true,
-            categories: ["electronics"],
-            dateAdded: "2023-10-10"
-        },
-        {
-            id: 11,
-            title: "Google Pixel 6 Pro - 5G Android Phone - 128GB",
-            price: 899.00,
-            image: "https://m.media-amazon.com/images/I/71SGl7xwR4L._AC_UL320_.jpg",
-            rating: 4,
-            ratingCount: 2134,
-            isPrime: true,
-            categories: ["electronics", "smartphone"],
-            dateAdded: "2023-11-15"
-        },
-        {
-            id: 12,
-            title: "LG 27GP850-B 27\" Ultragear QHD Nano IPS 1ms 165Hz HDR Monitor",
-            price: 396.99,
-            image: "https://m.media-amazon.com/images/I/81dAe2wXIqL._AC_UL320_.jpg",
-            rating: 4,
-            ratingCount: 1876,
-            isPrime: true,
-            categories: ["electronics", "computers"],
-            dateAdded: "2023-12-20"
         }
     ];
 } 
